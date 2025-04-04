@@ -1,4 +1,4 @@
-public class javapgrm {
+public class Javapgrm {
     int a;
     int b;
 
@@ -13,14 +13,26 @@ public class javapgrm {
         this.a = a;
         this.b = b;
         int sub = a - b;
-        System.out.println("Substraction : " + sub);
-
+        System.out.println("Subtraction : " + sub);
     }
 
-}
+    void calculation(int a, int b, int option) {
+        this.a = a;
+        this.b = b;
+        if (option == 1) {
+            int mul = a * b;
+            System.out.println("Multiplication : " + mul);
+        } else if (option == 2) {
+            int div = a / b;
+            System.out.println("Division : " + div);
+        }
+    }
 
-public static void main(String[] args) {
-    javapgrm obj = new javapgrm();
-    obj.calculation();
-
+    public static void main(String[] args) {
+        Javapgrm obj = new Javapgrm();
+        obj.calculation();
+        obj.calculation(10, 20);
+        obj.calculation(5, 4, 1);
+        obj.calculation(20, 5, 2);
+    }
 }
